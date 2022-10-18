@@ -27,13 +27,13 @@ namespace Proekt
             black = new Bitmap(new Bitmap("../../../data/notking2.jpg"), new Size(cellSize, cellSize));
             whiteking = new Bitmap(new Bitmap("../../../data/king1.jpg"), new Size(cellSize - 7, cellSize - 7));
             blackking = new Bitmap(new Bitmap("../../../data/king2.jpg"), new Size(cellSize, cellSize));
-            this.Text = "ïèâíûå øàøêè";
+            this.Text = "пивные шашки";
             Init();
             adddenis();
             TextBox textboxq = new TextBox();
             textboxq.Location = new Point(1020, cellSize * 2 + 14);
             textboxq.Size = new Size(cellSize, cellSize);
-            textboxq.Text = "÷åé õîä:";
+            textboxq.Text = "чей ход";
             textboxq.Enabled = false;
             this.Controls.Add(textboxq);
         }
@@ -580,7 +580,7 @@ namespace Proekt
                 Button button = new Button();
                 button.Location = new Point(200, 100);
                 button.Size = new Size(500, 200);
-                button.Text = "Ñåãîäíÿ ïü¸ì Áàëòèêó 9!";
+                button.Text = "сегодня пьем балтику 9!";
                 this.Controls.Add(button);
             }
             if (!white)
@@ -589,26 +589,26 @@ namespace Proekt
                 Button button = new Button();
                 button.Location = new Point(200, 100);
                 button.Size = new Size(500, 200);
-                button.Text = "Ñåãîäíÿ ïü¸ì Æèãóë¸âñêîå!";
+                button.Text = "сегодня пьем жигулевское!";
                 this.Controls.Add(button);
             }
-            if (draw & whosemove == 1)
-            {
-                this.Controls.Clear();
-                Button button = new Button();
-                button.Location = new Point(200, 100);
-                button.Size = new Size(500, 200);
-                button.Text = "Ñåãîäíÿ ïü¸ì Æèãóë¸âñêîå!";
-                this.Controls.Add(button);
-            }
-
             if (draw & whosemove == 2)
             {
                 this.Controls.Clear();
                 Button button = new Button();
                 button.Location = new Point(200, 100);
                 button.Size = new Size(500, 200);
-                button.Text = "Ñåãîäíÿ ïü¸ì Áàëòèêó 9!";
+                button.Text = "сегодня пьем балтику 9!";
+                this.Controls.Add(button);
+            }
+
+            if (draw & whosemove == 1)
+            {
+                this.Controls.Clear();
+                Button button = new Button();
+                button.Location = new Point(200, 100);
+                button.Size = new Size(500, 200);
+                button.Text = "сегодня пьем жигулевское!";
                 this.Controls.Add(button);
             }
         }
